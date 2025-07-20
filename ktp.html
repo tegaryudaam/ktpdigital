@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KTP Digital</title>
+  <style>
+    body {
+      background: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .ktp {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      width: 350px;
+    }
+
+    .ktp h2 {
+      text-align: center;
+      color: #00ffff;
+    }
+
+    .ktp img {
+      width: 100px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #00ffff;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .data {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .data strong {
+      color: #00ffff;
+    }
+
+    .form-edit {
+      margin-top: 15px;
+    }
+
+    .form-edit input {
+      margin-bottom: 8px;
+      padding: 6px;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    button {
+      background-color: #00ffff;
+      color: #000;
+      padding: 8px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="ktp">
+  <h2>KTP DIGITAL</h2>
+  <img id="foto" src="https://i.ibb.co/2K8C9Nd/profile.png" alt="Foto Profil">
+  <div class="data">
+    <p><strong>Nama:</strong> <span id="nama">Tegar Yuda</span></p>
+    <p><strong>NIK:</strong> <span id="nik">3210123456789001</span></p>
+    <p><strong>Tempat, Tgl Lahir:</strong> <span id="ttl">Kendal, 21 Maret 2010</span></p>
+    <p><strong>Alamat:</strong> <span id="alamat">Dusun Segrumung, Blorong</span></p>
+    <p><strong>Jenis Kelamin:</strong> <span id="jk">Laki-laki</span></p>
+  </div>
+
+  <div class="form-edit">
+    <input type="text" id="editNama" placeholder="Edit Nama">
+    <input type="text" id="editNik" placeholder="Edit NIK">
+    <input type="text" id="editTtl" placeholder="Edit Tempat, Tgl Lahir">
+    <input type="text" id="editAlamat" placeholder="Edit Alamat">
+    <input type="text" id="editJk" placeholder="Edit Jenis Kelamin">
+    <button onclick="updateData()">Simpan</button>
+  </div>
+</div>
+
+<script>
+  function updateData() {
+    document.getElementById("nama").innerText = document.getElementById("editNama").value || "Tegar Yuda";
+    document.getElementById("nik").innerText = document.getElementById("editNik").value || "3210123456789001";
+    document.getElementById("ttl").innerText = document.getElementById("editTtl").value || "Kendal, 21 Maret 2010";
+    document.getElementById("alamat").innerText = document.getElementById("editAlamat").value || "Dusun Segrumung, Blorong";
+    document.getElementById("jk").innerText = document.getElementById("editJk").value || "Laki-laki";
+  }
+</script>
+
+</body>
+</html>
